@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>L03. Advanced HTML</title>
+    <meta charset="utf-8" />
+
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      .student-list-section {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      .student-list-table {
+        width: 100%;
+      }
+
+      .center-text {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="student-list-section">
+      <h1>Student List</h1>
+      <table class="student-list-table">
+        <caption>
+          Table 01: This is CIS 201 student list
+        </caption>
+        <tr>
+          <th>Major</th>
+          <th>S. ID</th>
+          <th>S. Name</th>
+          <th colspan="2">S. Phone</th>
+        </tr>
+
+        <tr>
+          <td rowspan="4" class="center-text">SE</td>
+          <td>12345</td>
+          <td>Layla</td>
+          <td>0566666</td>
+          <td>0577777</td>
+        </tr>
+
+        <tr>
+          <td>12345</td>
+          <td>Manal</td>
+          <td>0566888</td>
+          <td>0579999</td>
+        </tr>
+
+        <tr>
+          <td>23456</td>
+          <td>Saleh</td>
+          <td colspan="2">056666</td>
+        </tr>
+
+        <tr>
+          <td>12345</td>
+          <td>Mohammad</td>
+          <td colspan="2">0563333</td>
+        </tr>
+
+        <tr>
+          <td rowspan="4" class="center-text">NES</td>
+          <td>34567</td>
+          <td>Najla</td>
+          <td>0544444</td>
+          <td>0577777</td>
+        </tr>
+
+        <tr>
+          <td>34567</td>
+          <td>Faisal</td>
+          <td>0544444</td>
+          <td>0577777</td>
+        </tr>
+
+        <tr>
+          <td>34567</td>
+          <td>Abdullah</td>
+          <td colspan="2">0544444</td>
+        </tr>
+        <tr>
+          <td>34567</td>
+          <td>Abdulaziz</td>
+          <td colspan="2">0544224</td>
+        </tr>
+      </table>
+    </section>
+  </body>
+</html>
