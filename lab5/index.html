@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mobile Club</title>
+
+    <style>
+      body {
+        color: #bcb4db;
+        background-color: #320b5a;
+      }
+
+      input,
+      select {
+        background-color: white;
+      }
+
+      .container {
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .center-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .center-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      .info-form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .input-entry {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 25px;
+      }
+
+      .form-buttons {
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center-row">Welcome to The Mobile Club</h1>
+    <hr />
+    <section class="center-col">
+      <h4>Please enter your information</h4>
+      <form action="#" class="container info-form">
+        <div class="input-entry">
+          <p>First Name:</p>
+          <input type="text" id="first_name" name="first_name" value="" />
+        </div>
+        <div class="input-entry">
+          <p>Last Name:</p>
+          <input type="text" id="last_name" name="last_name" value="" />
+        </div>
+        <div class="input-entry">
+          <p>Birth Day:</p>
+          <input type="date" id="birth_day" name="birth_day" value="" />
+        </div>
+        <div class="input-entry">
+          <p>Country:</p>
+          <select type="date" id="birth_day" name="birth_day" value="">
+            <option value="SAU">Saudi Arabia</option>
+            <option value="SYR">Syria</option>
+            <option value="KWT">Kuwait</option>
+            <option value="BHR">Bahrain</option>
+            <option value="QAT">Qatar</option>
+            <option value="ARE">United Arab Emirates</option>
+            <option value="OMN">Oman</option>
+          </select>
+        </div>
+        <div class="input-entry">
+          <p>Email Address:</p>
+          <input type="email" id="email" name="email" value="" />
+        </div>
+        <div class="input-entry">
+          <p>Password:</p>
+          <input type="password" id="password" name="password" value="" />
+        </div>
+        <div class="input-entry">
+          <p>Confirm Password:</p>
+          <input
+            type="password"
+            id="confirm_password"
+            name="confirm_password"
+            value=""
+          />
+        </div>
+        <div class="center-row form-buttons">
+          <button><a href="TheProduct.html">Next</a></button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
