@@ -1,0 +1,168 @@
+<!-- This file was made by Yazeed AlKhalaf on Mon 2 Oct 2023 -->
+<!-- GitHub reference: https://github.com/YazeedAlKhalaf/cis201-labs/blob/main/lab3-part2/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Forms</title>
+    <meta charset="utf-8" />
+
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+
+      .section {
+        max-width: 600px;
+      }
+
+      .fill-horz {
+        width: 100%;
+      }
+
+      .fill-98-horz {
+        width: 98%;
+      }
+
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:valid {
+        border: 2px solid transparent;
+      }
+    </style>
+  </head>
+
+  <body style="max-width: 600px">
+    <section class="section">
+      <h1>Registration Form</h1>
+      <p>Please fill in the registration if you wish to registers</p>
+
+      <table class="fill-horz">
+        <!-- the action can be also some custom backend endpoint you made, perhaps "/registration.php"? -->
+        <!-- i used formspree for ease of use :) -->
+        <form action="https://formspree.io/f/mnqkovva" method="POST">
+          <tr>
+            <td>First Name</td>
+            <td>
+              <input
+                class="fill-98-horz"
+                type="text"
+                id="first_name"
+                name="first_name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>
+              <input
+                class="fill-98-horz"
+                type="text"
+                id="last_name"
+                name="last_name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>
+              <input
+                class="fill-98-horz"
+                type="email"
+                id="email"
+                name="email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Age</td>
+            <td>
+              <input class="fill-98-horz" type="number" id="age" name="age" />
+            </td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>
+              <input type="radio" id="gender-male" name="gender" value="Male" />
+              <label for="gender-male">Male</label>
+              <br />
+              <input
+                type="radio"
+                id="gender-female"
+                name="gender"
+                value="Female"
+              />
+              <label for="gender-female">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td>Major</td>
+            <td>
+              <input
+                type="radio"
+                id="major-software-engineering"
+                name="major"
+                value="software-engineering"
+              />
+              <label for="major-software-engineering"
+                >Software Engineering</label
+              >
+              <br />
+              <input
+                type="radio"
+                id="major-network-engineering-and-security"
+                name="major"
+                value="network-engineering-and-security"
+              />
+              <label for="major-network-engineering-and-security"
+                >Network Engineering and Security</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>What are your favorite courses?</td>
+            <td>
+              <input type="text" id="web-design" name="web-design" value="WD" />
+              Web Design
+              <br />
+              <input
+                type="radio"
+                id="course-backend-development"
+                name="backend-development"
+                value="backend-development"
+              />
+              <label for="course-backend-development"
+                >Backend Development</label
+              >
+              <br />
+              <input
+                type="radio"
+                id="course-programming-java"
+                name="programming-java"
+                value="programming-java"
+              />
+              <label for="course-programming-java">Programming in Java</label>
+              <br />
+              <input
+                type="radio"
+                id="course-course-security"
+                name="course-security"
+                value="course-security"
+              />
+              <label for="course-security">Security</label>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <button type="submit">Submit Query</button>
+            </td>
+          </tr>
+        </form>
+      </table>
+    </section>
+  </body>
+</html>
