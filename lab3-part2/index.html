@@ -21,16 +21,13 @@
         width: 100%;
       }
 
-      .fill-98-horz {
+      .input-fill {
         width: 98%;
+        border: 2px solid transparent;
       }
 
       input:invalid {
         border: 2px dashed red;
-      }
-
-      input:valid {
-        border: 2px solid transparent;
       }
     </style>
   </head>
@@ -48,10 +45,11 @@
             <td>First Name</td>
             <td>
               <input
-                class="fill-98-horz"
+                class="input-fill"
                 type="text"
                 id="first_name"
                 name="first_name"
+                required
               />
             </td>
           </tr>
@@ -59,10 +57,11 @@
             <td>Last Name</td>
             <td>
               <input
-                class="fill-98-horz"
+                class="input-fill"
                 type="text"
                 id="last_name"
                 name="last_name"
+                required
               />
             </td>
           </tr>
@@ -70,23 +69,36 @@
             <td>Email</td>
             <td>
               <input
-                class="fill-98-horz"
+                class="input-fill"
                 type="email"
                 id="email"
                 name="email"
+                required
               />
             </td>
           </tr>
           <tr>
             <td>Age</td>
             <td>
-              <input class="fill-98-horz" type="number" id="age" name="age" />
+              <input
+                class="input-fill"
+                type="number"
+                id="age"
+                name="age"
+                required
+              />
             </td>
           </tr>
           <tr>
             <td>Gender</td>
             <td>
-              <input type="radio" id="gender-male" name="gender" value="Male" />
+              <input
+                type="radio"
+                id="gender-male"
+                name="gender"
+                value="Male"
+                required
+              />
               <label for="gender-male">Male</label>
               <br />
               <input
@@ -106,6 +118,7 @@
                 id="major-software-engineering"
                 name="major"
                 value="software-engineering"
+                required
               />
               <label for="major-software-engineering"
                 >Software Engineering</label
@@ -133,6 +146,7 @@
                 id="course-backend-development"
                 name="backend-development"
                 value="backend-development"
+                required
               />
               <label for="course-backend-development"
                 >Backend Development</label
