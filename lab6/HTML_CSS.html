@@ -3,10 +3,59 @@
   <head>
     <title> </title>
     <meta charset="UTF-8" />
+
+    <!-- using external level style sheet -->
+    <link rel="stylesheet" href="html_css_styles.css" />
+
+    <!-- using document level styles -->
+    <style type="text/css">
+      body {
+        font-family: "SF Pro Rounded", "SF Pro Display", "SF Pro Icons",
+          "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        max-width: 600px;
+        margin: auto;
+        padding: 1rem 2rem;
+      }
+
+      h1 {
+        color: darkred;
+        text-align: start;
+        font-style: italic;
+        font-size: large;
+        border: 5px solid gold;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      h2 {
+        color: tomato;
+        border: 5px solid silver;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      p {
+        color: chocolate;
+      }
+
+      a {
+        color: cadetblue;
+      }
+    </style>
   </head>
-  <body>
+  <!-- using inline level styles -->
+  <body style="background-color: black">
     <h1><a href="/chapterone.html"> Chapter One: Basic HTML </a></h1>
-    <p>This chapter will be explaining the basics of HTML</p>
+    <p
+      style="
+        color: #127653;
+        text-align: center;
+        font-size: 40px;
+        background-color: beige;
+      "
+    >
+      This chapter will be explaining the basics of HTML
+    </p>
     <h2>Section one: HTML Elements</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur
