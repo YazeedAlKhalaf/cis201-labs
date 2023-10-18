@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Product</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="center-row">List of Products</h1>
+    <hr />
+    <section class="center-col">
+      <h4>Here is our products that we have available to buy online</h4>
+      <table class="container">
+        <caption>
+          Prices
+        </caption>
+        <tr>
+          <th>Product</th>
+          <th>Memory</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>iPhone 11 Pro (Black)</td>
+          <td>64GB</td>
+          <td>$999</td>
+        </tr>
+        <tr>
+          <td>
+            iPhone 11 Pro
+            <ul>
+              <li>Black</li>
+              <li>Silver</li>
+              <li>Rose Gold</li>
+            </ul>
+          </td>
+          <td>128GB</td>
+          <td>$1100</td>
+        </tr>
+        <tr>
+          <td>iPhone Pro Max (Silver)</td>
+          <td>128GB</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>iPhone Pro Max (Black)</td>
+          <td>512GB</td>
+          <td>$1350</td>
+        </tr>
+      </table>
+      <div class="center-row form-buttons">
+        <form action="#" class="container info-form">
+          <label for="product-type">Choose a Product:</label>
+          <select name="product-type" id="product-type">
+            <option value="empty-product-type"></option>
+            <option value="iphone-11-pro-black-64gb">
+              iPhone 11 Pro (Black) 64GB
+            </option>
+            <option value="iphone-11-pro-black-128gb">
+              iPhone 11 Pro (Black) 128GB
+            </option>
+            <option value="iphone-11-pro-black-128gb">
+              iPhone 11 Pro (Silver) 128GB
+            </option>
+            <option value="iphone-11-pro-black-128gb">
+              iPhone 11 Pro (Rose Gold) 128GB
+            </option>
+            <option value="iphone-11-pro-max-silver-128gb">
+              iPhone Pro Max (Silver) 128GB
+            </option>
+            <option value="iphone-11-pro-max-black-512gb">
+              iPhone Pro Max (Black) 512GB
+            </option>
+          </select>
+          <button>submit!</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
