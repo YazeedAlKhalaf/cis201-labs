@@ -1,6 +1,6 @@
 body {
   color: #bcb4db;
-  background-color: #320b5a;
+  background: radial-gradient(circle, #2e2e2e, #30045b);
   font-family: "Courier New", Courier, monospace;
 }
 
@@ -54,4 +54,8 @@ td,
 th {
   border: 1px solid #bcb4db;
   padding: 5px;
+}
+
+.text-center {
+  text-align: center;
 }
