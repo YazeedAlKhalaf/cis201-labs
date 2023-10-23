@@ -1,6 +1,7 @@
 body {
   color: #bcb4db;
   background-color: #320b5a;
+  font-family: "Courier New", Courier, monospace;
 }
 
 input,
@@ -46,9 +47,11 @@ select {
 
 table {
   border-collapse: collapse;
+  background-color: #442a4f;
 }
 
 td,
 th {
   border: 1px solid #bcb4db;
+  padding: 5px;
 }
