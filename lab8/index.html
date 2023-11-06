@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Calculator</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <main>
+      <input type="text" id="calc-input" readonly />
+      <div class="input-keyboard">
+        <button onclick="inputButtonClicked(this)">7</button>
+        <button onclick="inputButtonClicked(this)">8</button>
+        <button onclick="inputButtonClicked(this)">9</button>
+        <button onclick="inputButtonClicked(this)">+</button>
+
+        <button onclick="inputButtonClicked(this)">4</button>
+        <button onclick="inputButtonClicked(this)">5</button>
+        <button onclick="inputButtonClicked(this)">6</button>
+        <button onclick="inputButtonClicked(this)">-</button>
+
+        <button onclick="inputButtonClicked(this)">1</button>
+        <button onclick="inputButtonClicked(this)">2</button>
+        <button onclick="inputButtonClicked(this)">3</button>
+        <button onclick="inputButtonClicked(this)">*</button>
+
+        <button onclick="inputButtonClicked(this)">C</button>
+        <button onclick="inputButtonClicked(this)">0</button>
+        <button id="equal-button" onclick="inputButtonClicked(this)">=</button>
+        <button onclick="inputButtonClicked(this)">/</button>
+      </div>
+    </main>
+    <footer>
+      <p>Made with 🧡 by Yazeed AlKhalaf</p>
+    </footer>
+  </body>
+</html>
