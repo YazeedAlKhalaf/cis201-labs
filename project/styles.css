@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary: linear-gradient(90deg, #6a2c90 0%, #a117f5 83.33%);
+  --on-primary: #ffffff;
+  --secondary: #fdffe3;
+  --on-secondary: #000000;
+  --sidebar-width: 300px;
+}
+
+.primary {
+  background: var(--primary);
+}
+
+.on-primary {
+  color: var(--on-primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.on-secondary {
+  color: var(--on-secondary);
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.text-display {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-title {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-body {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.text-caption {
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.wrapper-body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+#desktopMenu {
+  width: var(--sidebar-width);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.items-body {
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto auto auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper-body {
+    grid-template-columns: 100%;
+  }
+
+  .items-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .items-body {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .items-body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.item {
+  background-color: var(--secondary);
+  border-radius: 1rem;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.item-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.item-content {
+  padding: 1rem;
+}
+
+.item-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.add-to-cart-btn {
+  transition: all ease-in-out 0.5s;
+}
+
+.add-to-cart-btn:hover {
+  scale: 0.95;
+  transition: all ease-in-out 0.5s;
+}
