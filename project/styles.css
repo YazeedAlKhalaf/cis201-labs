@@ -30,35 +30,27 @@ body {
 
 .text-display {
   font-size: 2rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .text-title {
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .text-body {
   font-size: 1rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .text-caption {
   font-size: 0.75rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .wrapper-body {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: var(--sidebar-width) 1fr;
 }
 
 #desktopMenu {
@@ -66,35 +58,20 @@ body {
   position: fixed;
   height: 100vh;
   overflow-y: auto;
+  z-index: 100;
 }
 
 .items-body {
-  width: 100%;
   display: grid;
   gap: 20px;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(1, 1fr);
   padding: 20px;
-}
-
-@media screen and (max-width: 992px) {
-  .wrapper-body {
-    grid-template-columns: 100%;
-  }
-
-  .items-body {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  margin-left: var(--sidebar-width);
 }
 
 @media screen and (min-width: 992px) {
   .items-body {
-    margin-left: var(--sidebar-width);
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .items-body {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -124,9 +101,60 @@ body {
 
 .add-to-cart-btn {
   transition: all ease-in-out 0.5s;
+  background: var(--primary);
+  border: none;
+  color: var(--on-primary);
 }
 
 .add-to-cart-btn:hover {
   scale: 0.95;
   transition: all ease-in-out 0.5s;
+}
+
+#cartButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  padding: 16px;
+  border-radius: 100%;
+  background: var(--primary);
+  border: none;
+  color: var(--on-primary);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart {
+  background-color: white;
+  padding: 20px;
+  border-left: 1px solid #ddd;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  overflow-y: auto;
+  display: none;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.cart-footer {
+  position: fixed;
+  bottom: 20px;
+  width: 260px;
 }
