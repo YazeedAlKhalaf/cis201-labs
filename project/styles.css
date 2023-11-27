@@ -181,3 +181,17 @@ body {
 .nav-item-link {
   text-decoration: none;
 }
+
+.desktop-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.desktop-logo > img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 100%;
+}
