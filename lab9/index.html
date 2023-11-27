@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Example</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <p id="p1">Hello World!</p>
+    <p id="p2">Hello World!</p>
+    <img id="light" src="light_off.png" />
+    <br />
+    <button onClick="changeStyle()">Change Style</button>
+    <button onClick="turnOnLight()">Turn On</button>
+    <button onClick="turnOffLight()">Turn Off</button>
+    <script>
+      function changeStyle() {
+        document.getElementById("p1").style.color = "blue";
+      }
+
+      function turnOnLight() {
+        document.getElementById("light").src = "light_on.png";
+      }
+
+      function turnOffLight() {
+        document.getElementById("light").src = "light_off.png";
+      }
+    </script>
+  </body>
+</html>
