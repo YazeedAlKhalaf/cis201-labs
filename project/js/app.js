@@ -47,7 +47,7 @@ function loadItems(section) {
                 <p class="text-title on-secondary">${item.name}</p>
                 <div class="item-row">
                     <p class="text-body">${item.price} SR</p>
-                    <button class="btn btn-primary primary add-to-cart-btn" onclick="addToCart('${item.name}', ${item.price})">
+                    <button class="btn btn-primary primary add-to-cart-btn" onclick="addToCart('${item.name}', ${item.price}, '${item.imageUrl}')">
                         Add to Cart
                     </button>
                 </div>
@@ -57,12 +57,12 @@ function loadItems(section) {
   });
 }
 
-function addToCart(itemName, price) {
+function addToCart(itemName, price, imageUrl) {
   const existingItem = cart.find((item) => item.name === itemName);
   if (existingItem) {
     existingItem.count++;
   } else {
-    cart.push({ name: itemName, price, count: 1 });
+    cart.push({ name: itemName, price: price, count: 1, imageUrl: imageUrl });
   }
   updateCartUI();
 }
@@ -75,16 +75,46 @@ function updateCartUI() {
     const cartItemElement = document.createElement("li");
     cartItemElement.className = "cart-item";
     cartItemElement.innerHTML = `
-            <img src="${item.imageUrl}" alt="${
-      item.name
-    }" style="width: 50px; height: 50px;" />
-            <span>${item.name}</span>
-            <button onclick="incrementItemCount(${index})">+</button>
-            <span>${item.count}</span>
-            <button onclick="decrementItemCount(${index})">-</button>
-            <span>${item.price * item.count} SR</span>
-            <button onclick="removeItemFromCart(${index})">Remove</button>
-        `;
+<div class="cart-item-wrapper">
+  <div style="display: flex; flex-direction: row; align-items: center;">
+    <img
+      src="${item.imageUrl}"
+      alt="${item.name}"
+      style="width: 60px; height: 60px; border-radius: 1rem;"
+    />
+    
+    <div style="padding-left: 1rem">
+      <span class="text-title">${item.name}</span>
+      <br />
+      <span class="cart-item-price text-body">
+        ${item.price * item.count} SR
+      </span>
+    </div>
+  </div>
+  
+  <div>
+    <button
+      class="cart-item-button"
+      onclick="decrementItemCount(${index})"
+    >
+      -
+    </button>
+    <span class="cart-item-number">${item.count}</span>
+    <button
+      class="cart-item-button title-display"
+      onclick="incrementItemCount(${index})"
+    >
+      +
+    </button>
+    <button
+      class="cart-item-remove-btn"
+      onclick="removeItemFromCart(${index})"
+    >
+      <img src="images/trash-solid.svg" alt="delete item" />
+    </button>
+  </div>
+</div>
+`;
     cartItemsContainer.appendChild(cartItemElement);
   });
 

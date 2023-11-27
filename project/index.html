@@ -106,16 +106,22 @@
       <div id="cart" class="cart">
         <div class="cart-header">
           <h2>Your Cart</h2>
-          <button class="close-cart-btn" onclick="toggleCart()">Close</button>
+          <button
+            class="btn btn-primary primary close-cart-btn"
+            onclick="toggleCart()"
+          >
+            Close
+          </button>
         </div>
         <ul class="cart-items">
           <!-- Cart items will be dynamically inserted here -->
+          <li></li>
         </ul>
         <div class="cart-footer">
-          <div class="total-price">
+          <div class="total-price text-title">
             <span>Total: </span><span id="total-price">0 SR</span>
           </div>
-          <button class="checkout-btn">Checkout</button>
+          <button class="btn btn-primary checkout-btn">Checkout</button>
         </div>
       </div>
     </div>
