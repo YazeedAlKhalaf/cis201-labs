@@ -19,16 +19,18 @@
   </head>
   <body>
     <!-- Navbar for Mobile -->
-    <nav
-      class="navbar navbar-expand-lg d-lg-none px-4 py-2"
-      style="background: linear-gradient(90deg, #6a2c90 0%, #a117f5 83.33%)"
-    >
+    <nav class="navbar navbar-expand-lg d-lg-none px-4 py-2 primary">
       <img
         class="navbar-brand"
         style="width: 75px; border-radius: 100%"
         src="images/lakmousha-logo.png"
         alt="lakmousha logo"
       />
+      <span
+        id="selected-section"
+        class="text-display"
+        style="color: white"
+      ></span>
       <button
         class="navbar-toggler"
         type="button"
@@ -44,6 +46,22 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="mobileMenu">
           <!-- Mobile Menu Items will be inserted dynamically -->
         </ul>
+
+        <!-- about and contact pages links -->
+        <div class="d-flex flex-row align-items-center justify-content-evenly">
+          <a
+            href="about.html"
+            class="text-decoration-none text-title secondary rounded-pill px-2"
+          >
+            About
+          </a>
+          <a
+            href="contact.html"
+            class="text-decoration-none text-title secondary rounded-pill px-2"
+          >
+            Contact
+          </a>
+        </div>
       </div>
     </nav>
 
@@ -57,9 +75,25 @@
           src="images/lakmousha-logo.png"
           alt="lakmousha logo"
         />
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="desktopMenuList">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 p-4" id="desktopMenuList">
           <!-- Desktop Menu Items will be inserted dynamically -->
         </ul>
+
+        <!-- about and contact pages links -->
+        <div class="d-flex flex-row align-items-center justify-content-evenly">
+          <a
+            href="about.html"
+            class="text-decoration-none text-title secondary rounded-pill px-2"
+          >
+            About
+          </a>
+          <a
+            href="contact.html"
+            class="text-decoration-none text-title secondary rounded-pill px-2"
+          >
+            Contact
+          </a>
+        </div>
       </div>
 
       <div class="items-body">
@@ -96,6 +130,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="data.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,26 +1,13 @@
-const sections = {
-  Fatayer: [
-    {
-      name: "Chicken Jalapeno",
-      price: 20,
-      imageUrl: "images/chicken-jalapeno.webp",
-    },
-    {
-      name: "Chicken Jalapeno",
-      price: 22,
-      imageUrl: "images/chicken-jalapeno.webp",
-    },
-  ],
-  "Fatayer 2": [
-    {
-      name: "Chicken Jalapeno 2",
-      price: 40,
-      imageUrl: "images/chicken-jalapeno.webp",
-    },
-  ],
-};
-
 let cart = [];
+
+function closeNavbar() {
+  var navbarToggler = document.querySelector(".navbar-toggler");
+  var mobileNav = document.querySelector("#mobileNav");
+
+  if (navbarToggler.getAttribute("aria-expanded") === "true") {
+    navbarToggler.click();
+  }
+}
 
 function populateNavMenus() {
   const mobileMenu = document.getElementById("mobileMenu");
@@ -29,15 +16,16 @@ function populateNavMenus() {
   Object.keys(sections).forEach((section) => {
     const listItemMobile = document.createElement("li");
     listItemMobile.className = "nav-item";
-    listItemMobile.innerHTML = `<a class="nav-link" href="#">${section}</a>`;
+    listItemMobile.innerHTML = `<a class="on-primary text-title nav-item-link" href="#">${section}</a>`;
     mobileMenu.appendChild(listItemMobile);
 
     const listItemDesktop = listItemMobile.cloneNode(true);
     desktopMenu.appendChild(listItemDesktop);
 
-    listItemMobile
-      .querySelector("a")
-      .addEventListener("click", () => loadItems(section));
+    listItemMobile.querySelector("a").addEventListener("click", () => {
+      loadItems(section);
+      closeNavbar();
+    });
     listItemDesktop
       .querySelector("a")
       .addEventListener("click", () => loadItems(section));
@@ -45,6 +33,8 @@ function populateNavMenus() {
 }
 
 function loadItems(section) {
+  document.getElementById("selected-section").textContent = section;
+
   const itemsContainer = document.querySelector(".items-body");
   itemsContainer.innerHTML = "";
 
@@ -56,7 +46,7 @@ function loadItems(section) {
             <div class="item-content">
                 <p class="text-title on-secondary">${item.name}</p>
                 <div class="item-row">
-                    <p>${item.price} SR</p>
+                    <p class="text-body">${item.price} SR</p>
                     <button class="btn btn-primary primary add-to-cart-btn" onclick="addToCart('${item.name}', ${item.price})">
                         Add to Cart
                     </button>

@@ -49,8 +49,7 @@ body {
 }
 
 .wrapper-body {
-  display: grid;
-  grid-template-columns: var(--sidebar-width) 1fr;
+  display: block;
 }
 
 #desktopMenu {
@@ -66,12 +65,32 @@ body {
   gap: 20px;
   grid-template-columns: repeat(1, 1fr);
   padding: 20px;
-  margin-left: var(--sidebar-width);
+}
+
+@media screen and (min-width: 768px) {
+  .items-body {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
+  .wrapper-body {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) auto;
+    grid-template-rows: auto;
+  }
+
   .items-body {
+    margin-left: var(--sidebar-width);
     grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+  }
+
+  .item {
+    min-width: 300px;
   }
 }
 
@@ -157,4 +176,8 @@ body {
   position: fixed;
   bottom: 20px;
   width: 260px;
+}
+
+.nav-item-link {
+  text-decoration: none;
 }
